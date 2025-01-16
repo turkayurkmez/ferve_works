@@ -9,6 +9,7 @@ public class Main {
        String[] myFriends = new String[5];
 
 
+       /*
        int index = 0;
 
        while (index < myFriends.length) {
@@ -21,7 +22,7 @@ public class Main {
 
         for (String myFriend : myFriends) {
             System.out.println(myFriend);
-        }
+        }*/
 
         int[] numbers = new int[] {45,16,9,-5,33,69};
 
@@ -49,12 +50,51 @@ public class Main {
         }
 
 
-  //42
-        //Kırkiki
+                        //42
+                        //Kırkiki
+
+
+
+
+
+        //42
+        System.out.println("İki basamaklı bir sayı giriniz: ");
+        Scanner input = new Scanner(System.in);
+        int girilenSayi = input.nextInt();
+        //String okunus = YaziyaCevir(girilenSayi);
+
+
+
+
+        //System.out.println(okunus);
+
+        for (int i = 1; i < 100; i++) {
+            String okunus1 = YaziyaCevir(i);
+            System.out.println(okunus1);
+        }
 
 
 
 
 
     }
+
+    static String YaziyaCevir(int sayi){
+        String[] onlar = {"","on","yirmi","otuz","kırk","elli","altmış","yetmiş","seksen","doksan"};
+        String[] birler = {"","bir","iki","üç","dört","beş","altı","yedi","sekiz","dokuz"};
+
+        int onlarBasamagi = sayi / 10;
+        int birlerBasamagi = sayi % 10;
+        String okunus = onlar[onlarBasamagi] + " " + birler[birlerBasamagi];
+
+        return okunus;
+
+
+    }
+
+
+
+
+
+
 }
